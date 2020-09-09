@@ -46,7 +46,7 @@
 
     <p v-else-if="posts.length < 1">No Post found. Get started</p>
 
-    <Post v-else v-for="post in posts.data" :key="post.data.post_id" :post="post" />
+    <Post v-else v-for="(post, postKey) in posts.data" :key="postKey" :post="post" />
   </div>
 </template>
 
@@ -57,20 +57,20 @@ import { mapGetters } from "vuex";
 export default {
   name: "Show",
   components: {
-    Post
+    Post,
   },
   computed: {
     ...mapGetters({
       user: "user",
       friendButtonText: "friendButtonText",
       posts: "posts",
-      status: "status"
-    })
+      status: "status",
+    }),
   },
   mounted() {
     this.$store.dispatch("fetchUser", this.$route.params.userId);
     this.$store.dispatch("fetchUserPosts", this.$route.params.userId);
-  }
+  },
 };
 </script>
 

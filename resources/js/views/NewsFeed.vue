@@ -15,17 +15,17 @@ export default {
   name: "NewsFeed",
   components: {
     NewPost,
-    Post
+    Post,
   },
   mounted() {
     this.$store.dispatch("fetchNewsPosts");
   },
   computed: {
     ...mapGetters({
-      posts: "newsPosts",
-      newsStatus: "newsStatus"
-    })
-  }
+      posts: "posts",
+      newsStatus: "newsStatus",
+    }),
+  },
 };
 </script>
 
