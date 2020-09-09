@@ -23671,7 +23671,14 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _vm._m(1)
+          _c("div", [
+            _c("p", [
+              _vm._v(
+                _vm._s(_vm.post.data.attributes.comments.comment_count) +
+                  " comments"
+              )
+            ])
+          ])
         ]
       ),
       _vm._v(" "),
@@ -23770,12 +23777,6 @@ var staticRenderFns = [
         }
       })
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("p", [_vm._v("123 comments")])])
   }
 ]
 render._withStripped = true

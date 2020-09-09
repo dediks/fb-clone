@@ -32,7 +32,7 @@
         <p class="ml-1">{{ post.data.attributes.likes.like_count }} likes</p>
       </div>
       <div>
-        <p>123 comments</p>
+        <p>{{ post.data.attributes.comments.comment_count }} comments</p>
       </div>
     </div>
     <div class="flex justify-between border-1 border-gray-400 m-4">

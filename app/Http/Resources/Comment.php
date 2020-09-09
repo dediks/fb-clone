@@ -20,11 +20,9 @@ class Comment extends JsonResource
                 'type' => 'comments',
                 'comment_id' => $this->id,
                 'attributes' => [
-                    'data' => [
-                        'body' => $this->body,
-                        'commented_by' => new UserResource($this->user),
-                        'commented_at' => $this->created_at->diffForHumans(),
-                    ]
+                    'body' => $this->body,
+                    'commented_by' => new UserResource($this->user),
+                    'commented_at' => $this->created_at->diffForHumans(),
                 ]
             ],
             'links' => [

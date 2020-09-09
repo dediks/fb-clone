@@ -16,6 +16,7 @@ class Post extends JsonResource
                 'attributes' => [
                     'posted_by' => new ResourcesUser($this->user),
                     'likes' => new LikeCollection($this->likes),
+                    'comments' => new CommentCollection($this->comments),
                     'body' => $this->body,
                     'image' => $this->image,
                     'posted_at' => $this->created_at->diffForHumans(),
